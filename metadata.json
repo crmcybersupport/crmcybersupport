@@ -1,0 +1,7 @@
+{
+  "name": "Copy of для фото",
+  "description": "A comprehensive suite of tools powered by the Gemini API. Generate and edit images, analyze and create videos, and get intelligent answers with thinking mode and location-aware grounding.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

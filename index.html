@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Creative Suite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+<style>
+  .font-black-ops {
+    font-family: 'Black Ops One', sans-serif;
+  }
+  .font-roboto-condensed {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  .sakura-mask-bg {
+    background-image: url('https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+
+  @keyframes sway {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(50px); }
+  }
+
+  .petal-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 10;
+  }
+
+  .petal {
+    position: absolute;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PHBhdGggZD0iTTI1LDBDMTIuNSwwLDAsMTIuNSwwLDI1YzAsMTAsOC4zLDE4LjUsMTguOCwyMi41Yy0yLjMtMy4xLTMuNS02LjktMy41LTEwLjljMC05LjcsNy44LTE3LjUsMTcuNS0xNy41YzMuOSwwLDcuNywxLjIsMTAuOSwzLjVDNDMuNSw4LjMsMzUsMCwyNSwweiIgZmlsbD0iI0YzOEE5QSIvPjwvc3ZnPg==');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fall linear infinite, sway ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+</style>
+</head>
+  <body class="bg-black text-white font-roboto-condensed">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
